@@ -1,0 +1,22 @@
+server:
+  port: 8082
+ms.auth.url: {MS.AUTH.URL}
+ms.btpmaroc.url: {MS.BTPMAROC.URL}
+ms.invoice.url: {MS.INVOICE.URL}
+
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "https://invoicebuilder.io/"
+            allowedHeaders: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - PATCH
+              - DELETE
+              - OPTIONS
+

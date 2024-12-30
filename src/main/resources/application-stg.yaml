@@ -1,0 +1,21 @@
+server:
+  port: 8082
+ms.auth.url: http://ms-auth:8081/
+ms.invoice.url: http://ms-profilemanager:8080/
+
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedHeaders: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - PATCH
+              - DELETE
+              - OPTIONS
+
